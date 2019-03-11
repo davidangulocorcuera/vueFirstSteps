@@ -1,19 +1,22 @@
+import fireApp from '@/plugins/firebase'
+
 export const state = () => ({
-  user: null,
-  counter: 0
+  user: null
 })
-export const mutations = {
-  setCounter(state, payload) {
-    state.counter = state.counter + payload
-  }
-}
+export const mutations = {}
 export const actions = {
-  increment({commit}, payload) {
-    commit('setCounter', payload)
+  fireTest (){
+    const payload = {
+      one: 'Apple',
+      two: 'Orange'
+    }
+    fireApp.database().ref('VueApp').push(payload)
+      .then(() => {
+        console.log("success")
+      })
+      .catch(error => {
+        console.log("error: ",error)
+      })
   }
 }
-export const getters = {
-  counter (state){
-    state.counter
-  }
-}
+export const getters = {}
