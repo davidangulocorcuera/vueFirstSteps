@@ -1,0 +1,20 @@
+{
+  "name": "nshop",
+  "version": "1.0.0",
+  "description": "test project",
+  "author": "david",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env HOST=localhost PORT=3040 nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "nuxt": "^2.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
